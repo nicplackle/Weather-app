@@ -38,7 +38,8 @@ h1 {
 }
 
 #button {
-  color: rgb(87, 87, 87);
+  color: white;
+  background-color: #1b1010;
   border: 1px solid rgb(87, 87, 87);
   border-radius: 25px;
   padding: 5px 50px;
