@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather-app</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+        crossorigin="anonymous"
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        >
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <div class="container">
+        <div class="location">
+            <h2 id="location">Location</h2>
+        </div>
+        <div class="card">
+            <img class="icon"></img>
+            <div class="temperature"></div>
+        </div>
+        <div class="card">
+            <img class="icon"></img>
+            <div class="temperature"></div>
+        </div>
+        <div class="card">
+            <img class="icon"></img>
+            <div class="temperature"></div>
+        </div>
+        <div class="card">
+            <img class="icon"></img>
+            <div class="temperature"></div>
+        </div>
+        <div class="card">
+            <img class="icon"></img>
+            <div class="temperature"></div>
+        </div>
+    </div>
+    
+    <div class="searchbar">
+        <button id="button" type="submit">Get it!</button>
+        <input autofocus type="text" placeholder="Enter your location" id="user-input">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
