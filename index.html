@@ -6,17 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather-app</title>
     <link rel="stylesheet" href="style.css">
+    
     <script
-        crossorigin="anonymous"
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        >
+    crossorigin="anonymous"
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    >
     </script>
 </head>
 <body>
-    <header>
-        <h1>Weather App</h1>
-    </header>
+    <div class="title">
+        <h1>Weather App</h1>  
+    </div>
+    <div class="header">
+        <img src="img/sun.jpeg" alt="Sun" id="img">   
+    </div>
+    
     <div class="container">
         <div class="location">
             <h2 id="location">Location</h2>
@@ -47,7 +52,10 @@
         <button id="button" type="submit">Get it!</button>
         <input autofocus type="text" placeholder="Enter your location" id="user-input">
     </div>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/jquery.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js" integrity="sha256-VV47uJSoHZUeiBcCs3FcBOQLMn++yeG/zqZvaUkvGZM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

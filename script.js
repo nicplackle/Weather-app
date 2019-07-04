@@ -6,6 +6,9 @@ const button = document.getElementById("button");
 const locationOutput = document.getElementById("location");
 const icons = document.getElementsByClassName("icon");
 const temperature = document.getElementsByClassName("temperature");
+
+let headerImg = document.getElementById("img");
+
 const ENTERKEY = 13;
 
 userInput.addEventListener("keyup", e => {
@@ -14,6 +17,11 @@ userInput.addEventListener("keyup", e => {
     button.click();
   }
 });
+
+// GSAP animation moves the title to center of page
+const title = document.getElementsByTagName("h1");
+console.log(title[0]);
+TweenMax.from(title[0], 3, { opacity: 0, x: 100, ease: Back.easeOut });
 
 button.addEventListener("click", () => {
   let city = userInput.value;
