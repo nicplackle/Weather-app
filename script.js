@@ -4,12 +4,25 @@ const imgLink = "http://openweathermap.org/img/wn/";
 const userInput = document.getElementById("user-input");
 const button = document.getElementById("button");
 const locationOutput = document.getElementById("location");
+const dayOutput = document.getElementsByClassName("day");
 const icons = document.getElementsByClassName("icon");
 const temperature = document.getElementsByClassName("temperature");
 
 let headerImg = document.getElementById("img");
 
 const ENTERKEY = 13;
+
+let newDay = new Date();
+let today = newDay.getDay();
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
+];
 
 userInput.addEventListener("keyup", e => {
   if (e.keyCode === ENTERKEY) {
@@ -41,6 +54,14 @@ button.addEventListener("click", () => {
       // add temperature to each card
       for (t = 0, d = 0; t < icons.length; t++, d += 8) {
         temperature[t].innerHTML = `${Math.floor(data.list[d].main.temp)}°C`;
+      }
+
+      // add next 5 days of the week
+      for (d = 0; d < dayOutput.length; d++, today++) {
+        if (today >= 7) {
+          today = 0;
+        }
+        dayOutput[d].innerHTML = days[today];
       }
     }
   );
